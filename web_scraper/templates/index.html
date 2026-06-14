@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Universal Web Scraper</title>
+
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+
+  <body>
+    <h1>Universal Web Scraper</h1>
+
+    <input type="text" id="url" placeholder="Enter URL" />
+
+    <div>
+      <label>
+        <input type="checkbox" value="headings" />
+        Headings
+      </label>
+
+      <label>
+        <input type="checkbox" value="paragraphs" />
+        Paragraphs
+      </label>
+
+      <label>
+        <input type="checkbox" value="links" />
+        Links
+      </label>
+
+      <label>
+        <input type="checkbox" value="images" />
+        Images
+      </label>
+    </div>
+
+    <button onclick="scrape()">Scrape</button>
+
+    <pre id="result"></pre>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
