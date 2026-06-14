@@ -1,0 +1,27 @@
+# virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# uv
+.python-version
+
+.env
+.env.*
+!env.example
+
+# Distribution / packaging
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+share/python-wheels/
+*.egg-info/
+*.egg
+MANIFEST
