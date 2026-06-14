@@ -15,7 +15,7 @@ from urllib.parse import quote
 # Set encoding to utf-8 to handle Unicode characters
 sys.stdout.reconfigure(encoding='utf-8')
 
-search_query = 'python programming language'
+search_query = 'phonk songs'
 
 formatted_query = quote(search_query).replace('%20', '+')
 
@@ -76,7 +76,7 @@ for item in soup.select('div#dismissible'):
 print(f"Total errors occurred: {error}")
 
 # Save the video data to a CSV file
-csv_file_path = 'video_data.csv'
+csv_file_path = './yt-query-scraper/video_data.csv'
 with open(csv_file_path, 'w', encoding='utf-8', newline='') as csvfile:
     fieldnames = ['Title', 'Channel Name', 'Channel Logo', 'Thumbnail URL', 'Video URL', 'Views', 'Time Uploaded']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -97,19 +97,20 @@ with open(csv_file_path, 'w', encoding='utf-8', newline='') as csvfile:
         })
 
 # Save the video data to a JSON file
-json_file_path = 'video_data.json'
+json_file_path = './yt-query-scraper/video_data.json'
 with open(json_file_path, 'w', encoding='utf-8') as jsonfile:
     json.dump(videos, jsonfile, ensure_ascii=False, indent=2)
 
 # Print video details
-# for video in videos:
-#     print(f"Title: {repr(video['title'])}")
-#     print(f"Channel Name: {video['channel_name']}")
-#     print(f"Channel Logo: {video['channel_logo']}")
-#     print(f"Thumbnail URL: {video['thumbnail_url']}")
-#     print(f"Video URL: {video['video_url']}")
-#     print(f"Views: {video['views']}")
-#     print(f"Time Uploaded: {video['time_uploaded']}")
-#     print('-' * 50)
-
+"""
+for video in videos:
+    print(f"Title: {repr(video['title'])}")
+    print(f"Channel Name: {video['channel_name']}")
+    print(f"Channel Logo: {video['channel_logo']}")
+    print(f"Thumbnail URL: {video['thumbnail_url']}")
+    print(f"Video URL: {video['video_url']}")
+    print(f"Views: {video['views']}")
+    print(f"Time Uploaded: {video['time_uploaded']}")
+    print('-' * 50)
+"""
 driver.quit()
